@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Change Success</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .checkmark-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .checkmark-icon svg {
+      fill: #fff;
+      width: 60px;
+      height: 60px;
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 18px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="checkmark-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" stroke-width="2" stroke="#fff" />
+        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" stroke="#fff" stroke-width="2" />
+      </svg>
+    </div>
+    <div class="message">
+      <p>Password changed successfully!</p>
+      <p>Redirecting to the homepage...</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col-md-5 mx-auto bg-light my-5 p-2">
+        <button class="btn btn-primary"><a href="{% url 'profile' %}"> Home</a></button>
+    </div>
+  </div>
+
+
+</body>
+</html>

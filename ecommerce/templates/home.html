@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+
+{% block bannerslider %}
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/banner/b1.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'images/banner/b2.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'images/banner/b3.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'images/banner/b4.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+
+      
+    </div>
+</div>
+
+
+{% endblock  %}
+{% block info %}
+<div class="container">
+    <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+        <h1>products</h1>
+        <small class="fs-5" > Dodla offers a wide range of products in both liqiud milk and by producty catogeries
+            Dairy products or milk products, also known as lacticinia, are food products made from (or containing) milk. The most common dairy animals are cow, water buffalo, nanny goat, and ewe. Dairy products include common grocery store food items in the Western world such as yogurt, cheese and butter.
+        </small>
+    </div>
+
+</div>
+{% endblock info %}
+
+{% block main-content %}
+<div class="container">
+    <h2 class="text-center"> Dairy product </h2>
+    <br><br><br><br>
+    <div class="row container">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="goodnesssec buttermilk smbg">
+                <a href="{% url 'category' 'GH' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'images/buffalo-ghee.png' %}" class="img-responsive" alt="">
+                        <p class="mlkpro">Ghee</p>
+
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="goodnesssec buttermilk curdbgpro">
+                <a href="{% url 'category' 'CR' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'images/curd-total.png' %}" class="img-responsive" alt="">
+                        <p class="mlkpro">Curd</p>
+
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="goodnesssec buttermilk buttermilk">
+                <a href="{% url 'category' 'IC' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'images/kulfi.png' %}" class="img-responsive" alt="">
+                        <p class="mlkpro">Ice Creams</p>
+
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+
+        <br><br>
+
+    </div>
+    <div class="row container">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="goodnesssec buttermilk smbg">
+                <a href="{% url 'category' 'MS' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'images/milk-shake-chocolate.png' %}" class="img-responsive" alt="">
+                        <p class="mlkpro">MilkShake</p>
+
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="goodnesssec buttermilk curdbgpro">
+                <a href="{% url 'category' 'ML' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'images/cow-milk.png' %}" class="img-responsive" alt="">
+                        <p class="mlkpro">Milk</p>
+
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="goodnesssec buttermilk buttermilk">
+                <a href="{% url 'category' 'IC' %}">
+                    <div class="goodnessseccont text-center">
+                        <img src="{% static 'images/icbars.png' %}" class="img-responsive" alt="">
+                        <p class="mlkpro">IceBars</p>
+
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </div>    
+</div>
+ 
+
+
+{% endblock main-content %}

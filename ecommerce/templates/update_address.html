@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block tile %}update address{% endblock tile %}
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <h3 > Welcome <span class="text-capitalize">{{request.user}}</span></h3>
+
+    </div>
+    <div class="col-sm-2 border-end">
+        <ul class="list-unstyled">
+            <li class="d-grid"><a href="{% url 'profile' %}" class="btn ">Profile</a></li>
+            <li class="d-grid"><a href="{% url 'address' %}" class="btn ">Address</a></li>
+        </ul>
+    </div>
+    <div class="container mt-3">
+        <form  method="post">
+            {% csrf_token %} 
+            <div class="row jumbotron box8">
+                <input type="text"  class="form-control" name="user" value="{{request.user}}" placeholder="{{request.user}}" disabled >    
+            <div class="col-sm-6 form-group">
+                <label for="name-f"> Name</label>
+                <input type="text" class="form-control"name="name"value="{{user.name}}"  {
+                font-weight: 600;
+                color: #666;
+                }
+                body {
+                 background: #f1f1f1;
+                }
+                .box8{
+                    box-shadow: 0px 0px 5px 1px #999;
+                }
+                .mx-t3{
+                    margin-top: -3rem;
+                } id="name-f" placeholder="Enter your  name." required>
+            </div>
+        <div class="col-sm-6 form-group">
+        <label for="name-l">Locality </label>
+        <input type="text" class="form-control" name="locality" id="name-l" value="{{user.locality}}" required>
+        </div>
+        <div class="col-sm-6 form-group">
+        <label for="email">city</label>
+        <input type="text" class="form-control" name="city" id="email" value="{{user.city}}" required>
+        </div>
+        <div class="col-sm-6 form-group">
+        <label for="username">mobile</label>
+        <input type="text" class="form-control" name="mobile" id="username"value="{{user.mobile}}" required>
+        </div>
+      
+      
+      
+      
+      
+      
+      
+        <div class="col-sm-6 form-group">
+        <label for="pass">zipcode</label>
+        <input type="text" name="zipcode" class="form-control" id="pass" value="{{user.zipcode}}" required>
+        </div>
+      
+
+
+        <div class="col-sm-12 form-group mb-0">
+        <button class="btn btn-primary float-right">update</button>
+        <a href="{% url 'address' %}" type="button" class="btn btn-danger">Back</a>
+        </div>
+        <div>
+            {% for messege in messages %}
+              <p class="text-danger fw-bold">{{messege}}</p>   
+            {% endfor %}
+        </div>
+
+        </div>
+        </form>
+   
+  
+  
+
+</div>
+
+</div>
+{% endblock main-content%}

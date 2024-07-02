@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% block tile %}about{% endblock tile %}
+{% block main-content %}
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/banner/b1.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'images/banner/b2.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'images/banner/b3.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+      <div class="carousel-item ">
+        <img src="{% static 'images/banner/b4.jpg' %}" class="d-block w-100" alt="banner image">
+      </div>
+
+      
+    </div>
+</div>
+
+
+
+<div class="container mt-3">
+    <br><h2 class="text-center">About US</h2> <br>
+    <div class="row container">
+        <p class="fs-4 text-center">Welcome to our ecommerce website, where we specialize in providing you with the freshest and highest-quality dairy products available. Our team is passionate about sourcing only the best dairy products, from milk and cheese to yogurt and ice cream.
+
+            We believe that good dairy products come from happy, healthy cows, so we work closely with local farmers who share our values and commitment to animal welfare. Our dairy products are free from hormones and antibiotics, and we take great care to ensure that they are produced in a sustainable and environmentally friendly way.
+            
+            Whether you're looking for a creamy brie cheese to pair with your favorite crackers, or a delicious yogurt for breakfast, we have something for everyone. We are dedicated to providing you with the best possible shopping experience, and our friendly team is always available to answer any questions you may have.
+            
+            Thank you for choosing us as your source for fresh and delicious dairy products. We look forward to serving you!</p>
+
+    </div>
+    <h2 class="text-center">Mission </h2> <br>
+    <div class="row container">
+        <p class="fs-4 text-center">Our mission at our ecommerce website is to provide our customers with the highest-quality dairy products, while also promoting sustainable and ethical farming practices. We are committed to sourcing our dairy products from local farmers who share our values, and who prioritize the welfare of their cows and the environment.
+
+            We believe that everyone deserves access to fresh, delicious dairy products, and we strive to make our products affordable and accessible to all. We are constantly working to improve our selection, and to offer new and innovative dairy products that meet the needs and preferences of our customers.
+            
+            At our ecommerce website, we are dedicated to providing exceptional customer service, and to ensuring that our customers are satisfied with their purchases. We believe that by working together with our customers and our local community, we can create a more sustainable and ethical food system that benefits us all.</p>
+    </div>
+
+</div>
+<br><br><br>
+
+
+{% endblock main-content%}
